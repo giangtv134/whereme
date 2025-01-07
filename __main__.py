@@ -53,8 +53,8 @@ def find_person_in_images(person_image_path, images_folder_path, output_folder_p
       pass
 
 if __name__ == "__main__":
-  person_image_path = "/mnt/c/Users/giang/Desktop/where_me/test/you.png" 
-  images_folder_path = "/mnt/c/Users/giang/Desktop/where_me/test/in" 
-  output_folder_path = "/mnt/c/Users/giang/Desktop/where_me/test/out" 
+  person_image_path = os.environ.get("ME")
+  images_folder_path = os.environ.get("IN")
+  output_folder_path = os.environ.get("OUT")
 
   find_person_in_images(person_image_path, images_folder_path, output_folder_path)
