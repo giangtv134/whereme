@@ -48,8 +48,8 @@ def find_person_in_images(person_image_path, images_folder_path, output_folder_p
           shutil.copy2(image_path, output_folder_path)
           break  # No need to check other faces in the same image
       print("End. Found: ", count, " images")
-    except IndexError:
-      # No faces found in the image
+    except Exception:
+      print(f"ERROR {filename}")
       pass
 
 if __name__ == "__main__":
